@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FARM – Masuk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/login.css">
+<script src="js/common.js"></script>
+</head>
+<body>
+<a class="home" href="index.html">&larr; Kembali ke beranda</a>
+<main class="wrap">
+  <div class="photo" role="img" aria-label="Petani tersenyum memeluk padi"></div>
+  <section class="right">
+  <div class="view" id="v-login">
+    <h1>Selamat Datang!</h1>
+    <p class="sub">Masuk ke akun anda</p>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-role="petani">Petani</button>
+      <button role="tab" aria-selected="false" data-role="bos">Bos tani</button>
+    </div>
+    <div class="card">
+      <div class="field">
+        <label for="id">Email / No.Hp</label>
+        <input id="id" type="text" autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="pw">Kata sandi</label>
+        <div class="pw">
+          <input id="pw" type="password" autocomplete="current-password">
+          <button class="eye" type="button" id="eye" aria-label="Tampilkan kata sandi">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path id="slash" d="M4 4l16 16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <label><input type="checkbox" id="rem"> Ingat saya</label>
+        <a href="#lupa" id="lupa">Lupa kata sandi?</a>
+      </div>
+      <button class="btn" id="go" type="button">Masuk</button>
+      <p class="msg" id="msg" role="status"></p>
+      <p class="reg">Belum punya akun? <a href="#daftar" id="daftar">Daftar di sini</a></p>
+    </div>
+    <p class="demo">Akun contoh: <b>petani@farm.id</b> atau <b>bos@farm.id</b>, sandi <b>farm12345</b></p>
+    <p class="alt">Atau masuk dengan</p>
+    <div class="social">
+      <button aria-label="Masuk dengan Google" data-sosial="Google"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.700 2.400 30.200 0 24 0 14.600 0 6.500 5.400 2.600 13.200l7.800 6.100C12.300 13.600 17.700 9.500 24 9.500z"/><path fill="#4285F4" d="M46.500 24.500c0-1.600-.1-3.100-.4-4.500H24v9h12.700c-.6 3-2.300 5.500-4.800 7.200l7.500 5.800c4.400-4.100 7.100-10.100 7.100-17.500z"/><path fill="#FBBC05" d="M10.400 28.700A14.500 14.500 0 0 1 9.500 24c0-1.600.3-3.200.9-4.700l-7.800-6.100A24 24 0 0 0 0 24c0 3.900.9 7.500 2.600 10.800l7.800-6.100z"/><path fill="#34A853" d="M24 48c6.500 0 11.900-2.100 15.900-5.800l-7.500-5.800c-2.100 1.400-4.800 2.300-8.400 2.300-6.300 0-11.700-4.100-13.600-9.800l-7.800 6.100C6.500 42.600 14.600 48 24 48z"/></svg></button>
+      <button aria-label="Masuk dengan Facebook" data-sosial="Facebook" style="background:#1877f2;border-color:#1877f2"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M14 8V6.200c0-.8.200-1.200 1.400-1.200H17V2h-2.600C11.200 2 10 3.800 10 6v2H8v3h2v11h4V11h2.800l.4-3H14z"/></svg></button>
+      <button aria-label="Masuk dengan nomor HP" data-sosial="HP" style="background:var(--card)"><svg width="22" height="22" viewBox="0 0 24 24" fill="#111"><path d="M6.600 10.800a15 15 0 0 0 6.600 6.600l2.200-2.200c.3-.3.700-.4 1-.2 1.100.4 2.300.6 3.600.6.600 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.500c.6 0 1 .4 1 1 0 1.300.2 2.500.6 3.600.1.300 0 .7-.2 1l-2.300 2.200z"/></svg></button>
+    </div>
+  </div>
+
+  <div class="view" id="v-daftar" hidden>
+    <h1>Buat Akun Baru</h1>
+    <p class="sub">Daftar untuk mulai menggunakan FARM</p>
+    <div class="tabs" role="tablist" aria-label="Daftar sebagai">
+      <button role="tab" aria-selected="true">Petani</button>
+      <button role="tab" aria-selected="false">Bos tani</button>
+    </div>
+    <div class="card compact">
+      <div class="field"><label for="d-nama">Nama lengkap</label><input id="d-nama" type="text" autocomplete="name"></div>
+      <div class="field"><label for="d-email">Email</label><input id="d-email" type="email" autocomplete="email"></div>
+      <div class="field"><label for="d-hp">No.Hp</label><input id="d-hp" type="tel" inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx"></div>
+      <div class="field"><label for="d-pw">Kata sandi</label><input id="d-pw" type="password" autocomplete="new-password"></div>
+      <p class="hint">Minimal 8 karakter.</p>
+      <div class="field"><label for="d-pw2">Ulangi kata sandi</label><input id="d-pw2" type="password" autocomplete="new-password"></div>
+      <label class="agree"><input type="checkbox" id="d-setuju"><span>Saya menyetujui syarat dan ketentuan FARM.</span></label>
+      <button class="btn" id="d-go" type="button">Daftar</button>
+      <p class="msg" id="d-msg" role="status"></p>
+      <p class="reg">Sudah punya akun? <a href="#masuk" data-back>Masuk di sini</a></p>
+    </div>
+  </div>
+
+  <div class="view" id="v-lupa" hidden>
+    <h1>Lupa Kata Sandi?</h1>
+    <p class="lead">Masukkan email atau No.Hp akunmu beserta nama lengkap yang terdaftar. Jika cocok, kamu bisa membuat kata sandi baru.</p>
+    <div class="card">
+      <div id="l1"><div class="field"><label for="l-id">Email / No.Hp</label><input id="l-id" type="text" autocomplete="username"></div><div class="field"><label for="l-nama">Nama lengkap (untuk verifikasi)</label><input id="l-nama" type="text" autocomplete="name"></div><button class="btn" id="l-go" type="button">Lanjut</button></div>
+      <div id="l2" hidden><div class="field"><label for="l-pw">Kata sandi baru</label><input id="l-pw" type="password" autocomplete="new-password"></div><div class="field"><label for="l-pw2">Ulangi kata sandi baru</label><input id="l-pw2" type="password" autocomplete="new-password"></div><button class="btn" id="l-save" type="button">Simpan kata sandi baru</button></div>
+      <p class="msg" id="l-msg" role="status"></p>
+      <p class="reg"><a href="#masuk" data-back>&larr; Kembali ke halaman masuk</a></p>
+    </div>
+  </div>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
